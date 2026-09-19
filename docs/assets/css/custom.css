@@ -356,29 +356,85 @@ th {
   margin-bottom: 60px;
 }
 
+/* Header logo (wide wordmark) - keep proportional and vertically centered */
+.md-header__button.md-logo {
+  margin: 0.2rem 0.2rem;
+  padding: 0.2rem 0.4rem 0.2rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 1.1rem;
+  width: auto;
+  max-width: none;
+  fill: currentColor;
+  /* The source wordmark has a sparkle accent sitting above the letters, which
+     skews the image's own vertical center below the actual letter baseline.
+     Nudge up so the lettering (not the sparkle) lines up with the title text. */
+  transform: translateY(-0.15rem);
+}
+
+/* Subtle divider between the logo and the site title */
+.md-header__button.md-logo {
+  border-right: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* Pill-shaped search box, matching a rounded always-visible search field */
+.md-search__form {
+  border-radius: 1.2rem !important;
+}
+
+@media screen and (min-width: 60em) {
+  .md-search__inner {
+    width: 14rem;
+  }
+
+  [data-md-toggle="search"]:checked ~ .md-header .md-search__inner {
+    width: 22rem;
+  }
+}
+
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+  border-radius: 1.2rem 1.2rem 0 0 !important;
+}
+
+.md-search__output {
+  border-radius: 0 0 0.6rem 0.6rem;
+  overflow: hidden;
+}
+
+/* Site title next to the logo - match the logo wordmark's visual text size */
+.md-header__title {
+  font-size: 1.05rem;
+}
+
 /* Search results proportionate sizing */
 .md-search-result__list {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .md-search-result__article h1 {
-  font-size: 1.2rem !important;
+  font-size: 0.95rem !important;
   margin: 0.5rem 0 !important;
+  overflow-wrap: break-word;
 }
 
 .md-search-result__article h2,
 .md-search-result__article h3 {
-  font-size: 1rem !important;
+  font-size: 0.85rem !important;
   margin: 0.3rem 0 !important;
+  overflow-wrap: break-word;
 }
 
 .md-search-result__article p {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   margin: 0.25rem 0;
 }
 
 .md-search-result__teaser {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   line-height: 1.4;
 }
 
