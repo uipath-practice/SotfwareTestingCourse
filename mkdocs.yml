@@ -1,8 +1,9 @@
-site_name: Software Testing ILT Guide
+site_name: Test Cloud & Agentic Testing -  Hand's-On ILT Guide
 site_description: UiPath Software & Agentic Testing Instructor-Led Training
 docs_dir: docs
 theme:
   name: material
+  logo: assets/images/partner-success-logo-header.png
   palette:
     - scheme: light
       primary: blue
